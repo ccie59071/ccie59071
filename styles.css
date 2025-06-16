@@ -1,0 +1,159 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Container */
+.container {
+    max-width: 100%;
+    width: 90vw; /* Relative to viewport width */
+    margin: 2vh auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 2.2rem); /* Responsive font size */
+    color: #2c3e50;
+}
+
+.contact-info {
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    color: #7f8c8d;
+    margin-top: 0.5rem;
+}
+
+.contact-info a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: clamp(1.2rem, 3.5vw, 1.4rem);
+    color: #34495e;
+}
+
+.entry {
+    margin-bottom: 1.5rem;
+}
+
+.entry p {
+    font-style: italic;
+    color: #7f8c8d;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.skills-grid span {
+    background: #ecf0f1;
+    padding: 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+}
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        width: 95vw; /* Slightly wider on mobile */
+    }
+
+    h1 {
+        font-size: clamp(1.5rem, 6vw, 1.8rem);
+    }
+
+    h2 {
+        font-size: clamp(1.2rem, 5vw, 1.5rem);
+    }
+
+    h3 {
+        font-size: clamp(1rem, 4vw, 1.2rem);
+    }
+
+    .contact-info, .entry p, ul, .skills-grid span {
+        font-size: clamp(0.75rem, 3.5vw, 0.85rem);
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 0.4rem;
+    }
+
+    ul {
+        margin-left: 1rem;
+    }
+}
+
+/* Extra Small Devices (e.g., very small phones) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0.8rem;
+        margin: 1vh auto;
+    }
+
+    h1 {
+        font-size: clamp(1.3rem, 6vw, 1.6rem);
+    }
+
+    h2 {
+        font-size: clamp(1rem, 4.5vw, 1.3rem);
+    }
+
+    h3 {
+        font-size: clamp(0.9rem, 4vw, 1.1rem);
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack skills vertically */
+    }
+}
