@@ -10,18 +10,50 @@ body {
     line-height: 1.5;
     color: #333;
     background-color: #f4f4f4;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-x: hidden;
 }
 
 /* Container */
 .container {
     max-width: 100%;
-    width: 90vw; /* Relative to viewport width */
+    width: 90vw;
     margin: 2vh auto;
     padding: 2rem;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sticky Navigation */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background: #2c3e50;
+    padding: 0.5rem;
+    z-index: 100;
+}
+
+.sticky-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-nav li {
+    margin: 0 1rem;
+}
+
+.sticky-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    transition: color 0.3s;
+}
+
+.sticky-nav a:hover {
+    color: #3498db;
 }
 
 /* Header */
@@ -31,8 +63,21 @@ header {
 }
 
 h1 {
-    font-size: clamp(1.8rem, 5vw, 2.2rem); /* Responsive font size */
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
     color: #2c3e50;
+}
+
+h2 {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: clamp(1.2rem, 3.5vw, 1.4rem);
+    color: #34495e;
 }
 
 .contact-info {
@@ -50,22 +95,38 @@ h1 {
     text-decoration: underline;
 }
 
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #2980b9;
+}
+
+/* Back Link */
+.back-link {
+    display: block;
+    font-size: clamp(0.8rem, 3vw, 0.9rem);
+    color: #3498db;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
 /* Sections */
 .section {
     margin-bottom: 2rem;
-}
-
-h2 {
-    font-size: clamp(1.4rem, 4vw, 1.8rem);
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 0.3rem;
-    margin-bottom: 1rem;
-}
-
-h3 {
-    font-size: clamp(1.2rem, 3.5vw, 1.4rem);
-    color: #34495e;
 }
 
 .entry {
@@ -101,11 +162,74 @@ ul {
     font-size: clamp(0.8rem, 2.5vw, 0.9rem);
 }
 
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.service {
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Testimonials */
+.testimonial {
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin-top: 1rem;
+}
+
+.contact-form label {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #2c3e50;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    align-self: flex-start;
+}
+
 /* Mobile-Specific Adjustments */
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
-        width: 95vw; /* Slightly wider on mobile */
+        width: 95vw;
+    }
+
+    .sticky-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sticky-nav li {
+        margin: 0.5rem;
     }
 
     h1 {
@@ -120,13 +244,16 @@ ul {
         font-size: clamp(1rem, 4vw, 1.2rem);
     }
 
-    .contact-info, .entry p, ul, .skills-grid span {
+    .contact-info, .entry p, ul, .skills-grid span, .service p, .testimonial p {
         font-size: clamp(0.75rem, 3.5vw, 0.85rem);
     }
 
     .skills-grid {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 0.4rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
     }
 
     ul {
@@ -134,11 +261,16 @@ ul {
     }
 }
 
-/* Extra Small Devices (e.g., very small phones) */
+/* Extra Small Devices */
 @media (max-width: 480px) {
     .container {
         padding: 0.8rem;
         margin: 1vh auto;
+    }
+
+    .sticky-nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
     h1 {
@@ -154,6 +286,6 @@ ul {
     }
 
     .skills-grid {
-        grid-template-columns: 1fr; /* Stack skills vertically */
+        grid-template-columns: 1fr;
     }
 }
