@@ -3,116 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Christian Shematsi - Resume</title>
+    <title>Christian Shematsi - IT Services</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="resume.html#contact">Contact</a></li>
+            <li><a href="resume.html">Resume</a></li>
+        </ul>
+    </nav>
     <div class="container">
-        <!-- Header Section -->
-        <header>
+        <!-- Hero Section -->
+        <header class="hero">
             <h1>Christian Shematsi</h1>
-            <p class="contact-info">
-                <a href="mailto:shematsic@gmail.com">contact@shematsi.uk</a> | +33 xxx xxx xxx | Paris, France
-            </p>
+            <h2>Secure Your Network with Expert IT Solutions</h2>
+            <p>Delivering advanced cybersecurity and network management for businesses worldwide.</p>
+            <a href="resume.html" class="cta-button">View My Resume</a>
         </header>
 
-        <!-- Education Section -->
-        <section class="section">
-            <h2>Education</h2>
-            <div class="entry">
-                <h3>Bachelor of Science in Information Technology</h3>
-                <p>Sikkim Manipal University, India</p>
+        <!-- Services Section -->
+        <section class="section" id="services">
+            <h2>Services Offered</h2>
+            <div class="services-grid">
+                <div class="service">
+                    <h3>Network Security</h3>
+                    <p>Configure and manage firewalls (Cisco, Palo Alto, Fortigate) to protect your infrastructure.</p>
+                </div>
+                <div class="service">
+                    <h3>VPN Solutions</h3>
+                    <p>Implement secure remote and site-to-site VPNs with Cisco ASA, Checkpoint, and AnyConnect.</p>
+                </div>
+                <div class="service">
+                    <h3>Vulnerability Management</h3>
+                    <p>Conduct assessments with Rapid7 and OpenVAS, ensuring CIS Benchmarks compliance.</p>
+                </div>
+                <div class="service">
+                    <h3>SIEM & Monitoring</h3>
+                    <p>Deploy Crowdstrike, Splunk, and ELK for real-time threat detection and response.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Certifications Section -->
-        <section class="section">
-            <h2>Certifications</h2>
-            <ul>
-                <li>CCIE Security #59071, May 2018</li>
-                <li>AZ-700: Azure Network Engineer Associate, March 2022</li>
-                <li>SC-200: Microsoft Security Operations Analyst</li>
-            </ul>
-        </section>
-
-        <!-- Technical Proficiencies Section -->
-        <section class="section">
-            <h2>Technical Proficiencies</h2>
-            <div class="skills-grid">
-                <span>Cisco</span>
-                <span>Crowdstrike-SIEM</span>
-                <span>Azure</span>
-                <span>Palo Alto</span>
-                <span>Zscaler</span>
-                <span>Juniper Switch</span>
-                <span>Fortigate</span>
-                <span>SNOW-JIRA</span>
-                <span>Layer 2 & 3 Security</span>
-                <span>Rapid7</span>
-                <span>ELK-Elastic-Kibana</span>
-                <span>Microsoft Office 365 Security</span>
+        <!-- Testimonials Section -->
+        <section class="section" id="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <p>"Christian’s expertise in network security transformed our infrastructure, ensuring robust protection." - IT Manager, Financial Sector</p>
+            </div>
+            <div class="testimonial">
+                <p>"His VPN solutions enabled seamless remote work for our team." - Project Lead, Tech Firm</p>
             </div>
         </section>
 
-        <!-- Professional Experience Section -->
+        <!-- Contact Section -->
         <section class="section">
-            <h2>Professional Experience</h2>
-
-            <div class="entry">
-                <h3>Security Administrator</h3>
-                <p><strong>Ibanfirst</strong>, Paris, France | Dec 2021 – Present</p>
-                <ul>
-                    <li>Analyze emails and adjust web security posture (proxy).</li>
-                    <li>Configure and troubleshoot firewalls (Palo Alto, WatchGuard).</li>
-                    <li>Manage alerts from cybersecurity tools (EDR, Microsoft Office 365 Security, VadeSecure, XMCO).</li>
-                    <li>Deploy network segmentation and adjust rules to reduce false positives.</li>
-                    <li>Integrate firewalls with logging/monitoring tools and report to management.</li>
-                    <li>Verify vulnerabilities, create JIRA tickets, and apply CIS Benchmarks solutions.</li>
-                </ul>
-            </div>
-
-            <div class="entry">
-                <h3>Network Security Engineer</h3>
-                <p><strong>KfW Bank</strong>, Uganda, Rwanda, Kenya, Tanzania, DR Congo | Jan 2020 – Sep 2021</p>
-                <ul>
-                    <li>Administered firewalls and hardware (Cisco FTD, ASA, Palo Alto).</li>
-                    <li>Integrated infrastructures (FTD, FMC, ASA, Cisco ISE, AD, Splunk).</li>
-                    <li>Implemented VPN solutions and redesigned LAN with Cisco ISE.</li>
-                    <li>Documented configurations and provided technical reports.</li>
-                </ul>
-            </div>
-
-            <div class="entry">
-                <h3>Network Security Consultant</h3>
-                <p><strong>Network Bulls Pvt</strong>, India | Jan 2018 – Jan 2020</p>
-                <ul>
-                    <li>Managed VPN technologies, including Cisco AnyConnect with DUO Security.</li>
-                    <li>Implemented remote VPN on Checkpoint and Cisco ASA.</li>
-                    <li>Contributed to solution architecture and design.</li>
-                </ul>
-            </div>
-
-            <div class="entry">
-                <h3>Network Security Engineer</h3>
-                <p><strong>Dimension Data East Africa</strong>, Uganda, Kenya | Nov 2016 – Dec 2017</p>
-                <ul>
-                    <li>Maintained firewalls (Cisco FTD, ASA, Palo Alto) with best practices.</li>
-                    <li>Provided L2 support for routing, switching, VPN, and QoS issues.</li>
-                    <li>Configured IPsec VPN tunnels and conducted vulnerability assessments (Rapid7, OpenVAS).</li>
-                    <li>Performed packet analysis with Wireshark.</li>
-                </ul>
-            </div>
-
-            <div class="entry">
-                <h3>Technical Customer Support Engineer</h3>
-                <p><strong>Dimension Data East Africa</strong>, Uganda | Jan 2014 – Oct 2016</p>
-                <ul>
-                    <li>Managed IT support tickets using SNOW, resolving hardware/software issues.</li>
-                    <li>Imaged laptops/desktops and maintained server network equipment.</li>
-                    <li>Ensured uninterrupted workflows via phone and email support.</li>
-                </ul>
-            </div>
+            <h2>Contact Me</h2>
+            <p>Ready to enhance your network security? Reach out today.</p>
+            <a href="resume.html#contact" class="cta-button">Get in Touch</a>
         </section>
     </div>
 </body>
