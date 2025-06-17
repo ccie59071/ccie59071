@@ -28,14 +28,8 @@
       "url": "https://shematsi.uk"
     }
     </script>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
+    <!-- Config Script -->
+    <script src="config.js"></script>
     <!-- Language Redirection -->
     <script>
       if (!sessionStorage.getItem('languageRedirected')) {
@@ -113,7 +107,11 @@
 
         <!-- Footer -->
         <footer>
-            <p>Connect with me: <a href="https://linkedin.com/in/your-profile">LinkedIn</a> | <a href="https://x.com/your-profile">X</a></p>
+            <p>Connect with me: <a id="linkedin" href="#">LinkedIn</a> | <a id="x-profile" href="#">X</a></p>
+            <script>
+              document.getElementById('linkedin').href = CONFIG.linkedinUrl;
+              document.getElementById('x-profile').href = CONFIG.xUrl;
+            </script>
         </footer>
     </div>
 </body>
