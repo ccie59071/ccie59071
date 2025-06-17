@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://shematsi.uk/sitemap.xml
+Sitemap: https://shematsi.fr/sitemap.xml
