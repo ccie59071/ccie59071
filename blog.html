@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Christian Shematsi - Blog</title>
+    <meta name="description" content="Blog by Christian Shematsi showcasing network security proofs of concept, including topology diagrams, for businesses in France and Europe.">
+    <meta name="keywords" content="Christian Shematsi blog, network security PoC, cybersecurity France, network engineering Europe, topology diagrams, CCIE Security">
+    <meta name="author" content="Christian Shematsi">
+    <meta name="robots" content="index, follow">
+    <!-- Hreflang for Multilingual SEO -->
+    <link rel="alternate" hreflang="en" href="https://shematsi.uk/blog.html">
+    <link rel="alternate" hreflang="fr" href="https://shematsi.fr/blog-fr.html">
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Christian Shematsi Blog",
+      "url": "https://shematsi.uk/blog.html",
+      "author": {
+        "@type": "Person",
+        "name": "Christian Shematsi"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <!-- Language Redirection -->
+    <script>
+      if (!sessionStorage.getItem('languageRedirected')) {
+        const userLang = navigator.language || navigator.languages[0];
+        if (userLang.startsWith('fr') && window.location.pathname !== '/blog-fr.html') {
+          sessionStorage.setItem('languageRedirected', 'true');
+          window.location.href = '/blog-fr.html';
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="#posts">Blog</a></li>
+            <li><a href="resume.html#contact">Contact</a></li>
+            <li><a href="blog-fr.html">Français</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="hero">
+            <h1>Network Security Blog</h1>
+            <h2>Proofs of Concept by Christian Shematsi</h2>
+            <p>Explore my network security engineering PoCs, including topology diagrams, to learn best practices for securing business networks in France and Europe.</p>
+        </header>
+
+        <!-- Blog Posts Section -->
+        <section class="section" id="posts">
+            <h2>Recent Posts</h2>
+
+            <article class="blog-post">
+                <h3>Securing a LAN with Cisco ISE</h3>
+                <p class="post-meta">Published: June 17, 2025</p>
+                <p>This PoC demonstrates how to use Cisco Identity Services Engine (ISE) to enforce network access control on a corporate LAN. The topology includes Cisco switches, ISE, and Active Directory integration.</p>
+                <img src="images/topology-cisco-ise.png" alt="Cisco ISE LAN Topology Diagram" class="blog-image">
+                <p><strong>Steps:</strong> Configure ISE policies, integrate with AD, and deploy 802.1X authentication.</p>
+                <a href="#posts" class="read-more">Read More</a>
+            </article>
+
+            <article class="blog-post">
+                <h3>VPN Failover with Palo Alto</h3>
+                <p class="post-meta">Published: June 10, 2025</p>
+                <p>This PoC shows how to set up a high-availability VPN solution using Palo Alto firewalls with automatic failover. The topology includes dual ISPs and IPsec tunnels.</p>
+                <img src="images/topology-palo-alto-vpn.png" alt="Palo Alto VPN Failover Topology Diagram" class="blog-image">
+                <p><strong>Steps:</strong> Configure IPsec, monitor ISP links, and enable failover policies.</p>
+                <a href="#posts" class="read-more">Read More</a>
+            </article>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Connect with me: <a href="https://linkedin.com/in/your-profile">LinkedIn</a> | <a href="https://x.com/your-profile">X</a></p>
+        </footer>
+    </div>
+</body>
+</html>
