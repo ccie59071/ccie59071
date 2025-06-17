@@ -4,6 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Christian Shematsi - IT Services</title>
+    <meta name="description" content="Christian Shematsi offers expert IT and network security services across France and Europe, specializing in firewall management, VPN solutions, and SIEM.">
+    <meta name="keywords" content="Christian Shematsi, IT services France, network security France, cybersecurity consultant Europe, firewall management, VPN solutions, SIEM, CCIE Security">
+    <meta name="author" content="Christian Shematsi">
+    <meta name="robots" content="index, follow">
+    <!-- Hreflang for Multilingual SEO -->
+    <link rel="alternate" hreflang="en" href="https://shematsi.uk/">
+    <link rel="alternate" hreflang="fr" href="https://shematsi.fr/">
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Christian Shematsi",
+      "jobTitle": "Network Security Consultant",
+      "email": "contact@shematsi.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris",
+        "addressRegion": "Île-de-France",
+        "addressCountry": "France"
+      },
+      "url": "https://shematsi.uk"
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <!-- Language Redirection -->
+    <script>
+      if (!sessionStorage.getItem('languageRedirected')) {
+        const userLang = navigator.language || navigator.languages[0];
+        if (userLang.startsWith('fr') && window.location.pathname !== '/index-fr.html') {
+          sessionStorage.setItem('languageRedirected', 'true');
+          window.location.href = '/index-fr.html';
+        }
+      }
+    </script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -15,14 +57,16 @@
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="resume.html#contact">Contact</a></li>
             <li><a href="resume.html">Resume</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index-fr.html">Français</a></li>
         </ul>
     </nav>
     <div class="container">
         <!-- Hero Section -->
         <header class="hero">
             <h1>Christian Shematsi</h1>
-            <h2>Secure Your Network with Expert IT Solutions</h2>
-            <p>Delivering advanced cybersecurity and network management for businesses worldwide.</p>
+            <h2>Secure Your Network Across France and Europe</h2>
+            <p>Delivering advanced cybersecurity and network management for businesses in France and beyond.</p>
             <a href="resume.html" class="cta-button">View My Resume</a>
         </header>
 
@@ -32,7 +76,7 @@
             <div class="services-grid">
                 <div class="service">
                     <h3>Network Security</h3>
-                    <p>Configure and manage firewalls (Cisco, Palo Alto, Fortigate) to protect your infrastructure.</p>
+                    <p>Configure and manage firewalls (Cisco, Palo Alto, Fortigate) to protect your infrastructure in France and Europe.</p>
                 </div>
                 <div class="service">
                     <h3>VPN Solutions</h3>
@@ -44,7 +88,7 @@
                 </div>
                 <div class="service">
                     <h3>SIEM & Monitoring</h3>
-                    <p>Deploy Crowdstrike, Splunk, and ELK for real-time threat detection and response.</p>
+                    <p>Deploy Crowdstrike, Splunk, and ELK for real-time threat detection across Europe.</p>
                 </div>
             </div>
         </section>
@@ -53,19 +97,24 @@
         <section class="section" id="testimonials">
             <h2>Testimonials</h2>
             <div class="testimonial">
-                <p>"Christian’s expertise in network security transformed our infrastructure, ensuring robust protection." - IT Manager, Financial Sector</p>
+                <p>"Christian’s expertise in network security transformed our infrastructure in France." - IT Manager, Financial Sector</p>
             </div>
             <div class="testimonial">
-                <p>"His VPN solutions enabled seamless remote work for our team." - Project Lead, Tech Firm</p>
+                <p>"His VPN solutions enabled seamless remote work for our European team." - Project Lead, Tech Firm</p>
             </div>
         </section>
 
         <!-- Contact Section -->
         <section class="section">
             <h2>Contact Me</h2>
-            <p>Ready to enhance your network security? Reach out today.</p>
+            <p>Ready to enhance your network security in France or Europe? Reach out today.</p>
             <a href="resume.html#contact" class="cta-button">Get in Touch</a>
         </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Connect with me: <a href="https://linkedin.com/in/your-profile">LinkedIn</a> | <a href="https://x.com/your-profile">X</a></p>
+        </footer>
     </div>
 </body>
 </html>
