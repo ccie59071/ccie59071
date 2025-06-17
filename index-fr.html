@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Christian Shematsi - Services Informatiques</title>
+    <meta name="description" content="Christian Shematsi propose des services informatiques et de sécurité réseau experts en France et en Europe, spécialisés dans la gestion de pare-feu, les solutions VPN et SIEM.">
+    <meta name="keywords" content="Christian Shematsi, services informatiques France, sécurité réseau France, consultant cybersécurité Europe, gestion pare-feu, solutions VPN, SIEM, CCIE Security">
+    <meta name="author" content="Christian Shematsi">
+    <meta name="robots" content="index, follow">
+    <!-- Hreflang for Multilingual SEO -->
+    <link rel="alternate" hreflang="en" href="https://shematsi.uk/">
+    <link rel="alternate" hreflang="fr" href="https://shematsi.fr/">
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Christian Shematsi",
+      "jobTitle": "Consultant en Sécurité Réseau",
+      "email": "contact@shematsi.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris",
+        "addressRegion": "Île-de-France",
+        "addressCountry": "France"
+      },
+      "url": "https://shematsi.fr"
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <!-- Language Redirection -->
+    <script>
+      if (!sessionStorage.getItem('languageRedirected')) {
+        const userLang = navigator.language || navigator.languages[0];
+        if (userLang.startsWith('en') && window.location.pathname !== '/index.html') {
+          sessionStorage.setItem('languageRedirected', 'true');
+          window.location.href = '/index.html';
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#temoignages">Témoignages</a></li>
+            <li><a href="resume-fr.html#contact">Contact</a></li>
+            <li><a href="resume-fr.html">CV</a></li>
+            <li><a href="blog-fr.html">Blog</a></li>
+            <li><a href="index.html">English</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <h1>Christian Shematsi</h1>
+            <h2>Sécurisez Votre Réseau en France et en Europe</h2>
+            <p>Fournir des solutions avancées de cybersécurité et de gestion de réseau pour les entreprises en France et au-delà.</p>
+            <a href="resume-fr.html" class="cta-button">Voir Mon CV</a>
+        </header>
+
+        <!-- Services Section -->
+        <section class="section" id="services">
+            <h2>Services Proposés</h2>
+            <div class="services-grid">
+                <div class="service">
+                    <h3>Sécurité Réseau</h3>
+                    <p>Configurez et gérez des pare-feu (Cisco, Palo Alto, Fortigate) pour protéger votre infrastructure en France et en Europe.</p>
+                </div>
+                <div class="service">
+                    <h3>Solutions VPN</h3>
+                    <p>Mettez en œuvre des VPN sécurisés à distance et de site à site avec Cisco ASA, Checkpoint et AnyConnect.</p>
+                </div>
+                <div class="service">
+                    <h3>Gestion des Vulnérabilités</h3>
+                    <p>Réalisez des évaluations avec Rapid7 et OpenVAS, garantissant la conformité aux normes CIS.</p>
+                </div>
+                <div class="service">
+                    <h3>SIEM & Surveillance</h3>
+                    <p>Déployez Crowdstrike, Splunk et ELK pour une détection des menaces en temps réel à travers l'Europe.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section" id="temoignages">
+            <h2>Témoignages</h2>
+            <div class="testimonial">
+                <p>"L’expertise de Christian en sécurité réseau a transformé notre infrastructure en France." - Responsable informatique, Secteur financier</p>
+            </div>
+            <div class="testimonial">
+                <p>"Ses solutions VPN ont permis un travail à distance fluide pour notre équipe européenne." - Chef de projet, Entreprise technologique</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section">
+            <h2>Contactez-Moi</h2>
+            <p>Prêt à renforcer la sécurité de votre réseau en France ou en Europe ? Contactez-moi dès aujourd'hui.</p>
+            <a href="resume-fr.html#contact" class="cta-button">Prendre Contact</a>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Connectez-vous avec moi : <a href="https://linkedin.com/in/your-profile">LinkedIn</a> | <a href="https://x.com/your-profile">X</a></p>
+        </footer>
+    </div>
+</body>
+</html>
