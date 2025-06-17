@@ -1,6 +1,6 @@
 const CONFIG = {
   formspreeEndpoint: 'https://formspree.io/f/meokkbnk', // Replace with your Formspree endpoint
-  googleAnalyticsId: 'G-XXXXXXXXXX', // Replace with your Google Analytics ID (or leave empty to disable)
+  googleAnalyticsId: 'G-WJ2KXWYWN1', // Replace with your Google Analytics ID (or leave empty to disable)
   linkedinUrl: 'https://linkedin.com/in/your-profile', // Replace with your LinkedIn URL
   xUrl: 'https://x.com/your-profile', // Replace with your X URL
   phoneNumber: '+XXX-XXX-XXX-XXX' // Replace with your phone number
