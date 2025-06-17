@@ -4,6 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Christian Shematsi - Resume</title>
+    <meta name="description" content="Resume of Christian Shematsi, a certified network security expert (CCIE, Azure) offering cybersecurity services in France and Europe.">
+    <meta name="keywords" content="Christian Shematsi resume, network security France, cybersecurity consultant Europe, CCIE Security, Azure Network Engineer, IT services France">
+    <meta name="author" content="Christian Shematsi">
+    <meta name="robots" content="index, follow">
+    <!-- Hreflang for Multilingual SEO -->
+    <link rel="alternate" hreflang="en" href="https://shematsi.uk/resume.html">
+    <link rel="alternate" hreflang="fr" href="https://shematsi.fr/resume-fr.html">
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Christian Shematsi",
+      "jobTitle": "Network Security Consultant",
+      "email": "contact@shematsi.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris",
+        "addressRegion": "Île-de-France",
+        "addressCountry": "France"
+      },
+      "url": "https://shematsi.uk/resume.html"
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <!-- Language Redirection -->
+    <script>
+      if (!sessionStorage.getItem('languageRedirected')) {
+        const userLang = navigator.language || navigator.languages[0];
+        if (userLang.startsWith('fr') && window.location.pathname !== '/resume-fr.html') {
+          sessionStorage.setItem('languageRedirected', 'true');
+          window.location.href = '/resume-fr.html';
+        }
+      }
+    </script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -11,11 +53,14 @@
 <body>
     <nav class="sticky-nav">
         <ul>
+            <li><a href="#summary">Summary</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="resume-fr.html">Français</a></li>
             <li><a href="index.html">Home</a></li>
         </ul>
     </nav>
@@ -23,12 +68,19 @@
         <!-- Header Section -->
         <header>
             <h1>Christian Shematsi</h1>
+            <h2>Network Security Consultant</h2>
             <p class="contact-info">
                 <a href="mailto:contact@shematsi.uk">contact@shematsi.uk</a> | +XXX-XXX-XXX-XXX
             </p>
             <a href="resume-CV-Christian.pdf" class="cta-button" download>Download Resume</a>
             <a href="index.html" class="back-link">← Back to Home</a>
         </header>
+
+        <!-- Summary Section -->
+        <section class="section" id="summary">
+            <h2>Summary</h2>
+            <p>Christian Shematsi is a certified network security expert (CCIE Security #59071, Azure Network Engineer Associate) with over a decade of experience providing cybersecurity services in France and Europe. Specializing in firewall management (Cisco, Palo Alto, Fortigate), VPN solutions, and SIEM tools (Crowdstrike, Splunk, ELK), I ensure robust network protection and CIS Benchmarks compliance.</p>
+        </section>
 
         <!-- Education Section -->
         <section class="section" id="education">
@@ -131,8 +183,8 @@
         <!-- Contact Form Section -->
         <section class="section" id="contact">
             <h2>Contact</h2>
-            <p>Interested in my services? Send me a message below.</p>
-            <form action="https://formspree.io/f/meokkbnk" method="POST" class="contact-form">
+            <p>Interested in cybersecurity services in France or Europe? Send me a message.</p>
+            <form action="https://formspree.io/f/{your-form-id}" method="POST" class="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -145,6 +197,11 @@
                 <button type="submit" class="cta-button">Send Message</button>
             </form>
         </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Connect with me: <a href="https://linkedin.com/in/your-profile">LinkedIn</a> | <a href="https://x.com/your-profile">X</a></p>
+        </footer>
     </div>
 </body>
 </html>
