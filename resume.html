@@ -28,14 +28,8 @@
       "url": "https://shematsi.uk/resume.html"
     }
     </script>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
+    <!-- Config Script -->
+    <script src="config.js"></script>
     <!-- Language Redirection -->
     <script>
       if (!sessionStorage.getItem('languageRedirected')) {
@@ -70,7 +64,7 @@
             <h1>Christian Shematsi</h1>
             <h2>Network Security Consultant</h2>
             <p class="contact-info">
-                <a href="mailto:contact@shematsi.uk">contact@shematsi.uk</a> | +XXX-XXX-XXX-XXX
+                <a href="mailto:contact@shematsi.uk">contact@shematsi.uk</a> | <span id="phone-number"></span>
             </p>
             <a href="resume-CV-Christian.pdf" class="cta-button" download>Download Resume</a>
             <a href="index.html" class="back-link">← Back to Home</a>
@@ -184,7 +178,7 @@
         <section class="section" id="contact">
             <h2>Contact</h2>
             <p>Interested in cybersecurity services in France or Europe? Send me a message.</p>
-            <form action="https://formspree.io/f/{your-form-id}" method="POST" class="contact-form">
+            <form id="contact-form" method="POST" class="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -200,7 +194,15 @@
 
         <!-- Footer -->
         <footer>
-            <p>Connect with me: <a href="https://linkedin.com/in/your-profile">LinkedIn</a> | <a href="https://x.com/your-profile">X</a></p>
+            <p>Connect with me: <a id="linkedin" href="#">LinkedIn</a> | <a id="x-profile" href="#">X</a></p>
+            <script>
+              // Set Formspree endpoint
+              document.getElementById('contact-form').action = CONFIG.formspreeEndpoint;
+              // Set contact info
+              document.getElementById('linkedin').href = CONFIG.linkedinUrl;
+              document.getElementById('x-profile').href = CONFIG.xUrl;
+              document.getElementById('phone-number').textContent = CONFIG.phoneNumber;
+            </script>
         </footer>
     </div>
 </body>
