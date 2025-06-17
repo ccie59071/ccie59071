@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Christian Shematsi - Blog</title>
+    <meta name="description" content="Blog de Christian Shematsi présentant des preuves de concept en sécurité réseau, y compris des diagrammes de topologie, pour les entreprises en France et en Europe.">
+    <meta name="keywords" content="Christian Shematsi blog, preuve de concept sécurité réseau, cybersécurité France, ingénierie réseau Europe, diagrammes de topologie, CCIE Security">
+    <meta name="author" content="Christian Shematsi">
+    <meta name="robots" content="index, follow">
+    <!-- Hreflang for Multilingual SEO -->
+    <link rel="alternate" hreflang="en" href="https://shematsi.uk/blog.html">
+    <link rel="alternate" hreflang="fr" href="https://shematsi.fr/blog-fr.html">
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Blog de Christian Shematsi",
+      "url": "https://shematsi.fr/blog-fr.html",
+      "author": {
+        "@type": "Person",
+        "name": "Christian Shematsi"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <!-- Language Redirection -->
+    <script>
+      if (!sessionStorage.getItem('languageRedirected')) {
+        const userLang = navigator.language || navigator.languages[0];
+        if (userLang.startsWith('en') && window.location.pathname !== '/blog.html') {
+          sessionStorage.setItem('languageRedirected', 'true');
+          window.location.href = '/blog.html';
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="index-fr.html">Accueil</a></li>
+            <li><a href="resume-fr.html">CV</a></li>
+            <li><a href="#posts">Blog</a></li>
+            <li><a href="resume-fr.html#contact">Contact</a></li>
+            <li><a href="blog.html">English</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="hero">
+            <h1>Blog sur la Sécurité Réseau</h1>
+            <h2>Preuves de Concept par Christian Shematsi</h2>
+            <p>Découvrez mes PoCs en ingénierie de sécurité réseau, y compris des diagrammes de topologie, pour apprendre les meilleures pratiques pour sécuriser les réseaux d'entreprise en France et en Europe.</p>
+        </header>
+
+        <!-- Blog Posts Section -->
+        <section class="section" id="posts">
+            <h2>Articles Récents</h2>
+
+            <article class="blog-post">
+                <h3>Sécurisation d'un LAN avec Cisco ISE</h3>
+                <p class="post-meta">Publié : 17 Juin 2025</p>
+                <p>Cette PoC montre comment utiliser Cisco Identity Services Engine (ISE) pour appliquer un contrôle d'accès réseau sur un LAN d'entreprise. La topologie inclut des commutateurs Cisco, ISE et une intégration Active Directory.</p>
+                <img src="images/topology-cisco-ise.png" alt="Diagramme de Topologie LAN Cisco ISE" class="blog-image">
+                <p><strong>Étapes :</strong> Configurer les politiques ISE, intégrer avec AD, et déployer l'authentification 802.1X.</p>
+                <a href="#posts" class="read-more">Lire Plus</a>
+            </article>
+
+            <article class="blog-post">
+                <h3>Basculement VPN avec Palo Alto</h3>
+                <p class="post-meta">Publié : 10 Juin 2025</p>
+                <p>Cette PoC explique comment configurer une solution VPN à haute disponibilité avec des pare-feu Palo Alto et un basculement automatique. La topologie inclut deux FAI et des tunnels IPsec.</p>
+                <img src="images/topology-palo-alto-vpn.png" alt="Diagramme de Topologie Basculement VPN Palo Alto" class="blog-image">
+                <p><strong>Étapes :</strong> Configurer IPsec, surveiller les liens FAI, et activer les politiques de basculement.</p>
+                <a href="#posts" class="read-more">Lire Plus</a>
+            </article>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Connectez-vous avec moi : <a href="https://linkedin.com/in/your-profile">LinkedIn</a> | <a href="https://x.com/your-profile">X</a></p>
+        </footer>
+    </div>
+</body>
+</html>
